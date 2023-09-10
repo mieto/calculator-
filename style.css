@@ -1,0 +1,66 @@
+/* テーブルの装飾 */
+body{
+    background-color: black;
+}
+table{
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+input{
+    width: 80px;
+    height: 80px;
+    font-size: xx-large;
+    color: azure;
+    background-color: rgb(54, 57, 61);
+    border-radius: 50px;
+    padding: 7px;
+    margin: 5px;
+}
+
+input:hover{
+    background-color: rgb(177, 177, 166);
+    text-decoration: none;
+}
+
+.result{
+    width: 400px;
+    text-align: right;
+    background-color: black;
+    color: azure;
+    border-radius: 0px;
+}
+
+.ope{
+    background-color: orange;
+
+}
+.equal{
+    background-color: orange;
+}
+
+.spe{
+    background-color: gray;
+    color: black;
+}
+
+.zero{
+    width: 185px;
+    height: 80px;
+    border-radius: 45%;
+    text-align: left;
+    padding-left: 18px;
+}
+
+.decimal{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* 位置の変更 colspanで解決したンゴ */
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>電卓</title>
+</head>
+
+<body>
+    <script src="calculator.js"></script>
+    <form name="calculator">
+        <table>
+            <!-- 表示部分 -->
+            <tr>
+                <td colspan="4">
+                    <input type="text" class="result" name="result" value="" placeholder="0" disabled>
+                </td>
+            </tr>
+            <!-- 1段目　AC, +/-, %, /  thisを使えばid属性を記述する必要なく直接アクセス可能　除算は記号を変換する必要がある-->
+
+            <tr >
+                <td><input type="button" value="AC" class="spe" onclick="calculation(this)"></td>
+                <td><input type="button" value="+/-" class="spe" onclick="reverse(this)"></td>
+                <td><input type="button" value="%" class="spe" onclick="percentage(this)"></td>
+                <td><input type="button" value="÷" class="ope" name="div_btn" onclick="calculation(this)"></td>
+            </tr>
+            <!-- 2段目 7, 8, 9, ×  乗算は記号を変換する必要がある-->
+            <tr>
+                <td><input type="button" value="7" onclick="calculation(this)"></td>
+                <td><input type="button" value="8" onclick="calculation(this)"></td>
+                <td><input type="button" value="9" onclick="calculation(this)"></td>
+                <td><input type="button" value="×" class="ope" name="mul_btn" onclick="calculation(this)"></td>
+            </tr>
+            <!-- 3段目 4, 5, 6, - -->
+            <tr class="size1">
+                <td><input type="button" value="4" onclick="calculation(this)"></td>
+                <td><input type="button" value="5" onclick="calculation(this)"></td>
+                <td><input type="button" value="6" onclick="calculation(this)"></td>
+                <td><input type="button" value="-" class="ope" onclick="calculation(this)"></td>
+            </tr>
+            <!-- 4段目 1, 2, 3, + -->
+            <tr>
+                <td><input type="button" value="1" onclick="calculation(this)"></td>
+                <td><input type="button" value="2" onclick="calculation(this)"></td>
+                <td><input type="button" value="3" onclick="calculation(this)"></td>
+                <td><input type="button" value="+" class="ope" onclick="calculation(this)"></td>
+            </tr>
+
+            <!-- 5段目 0, . = -->
+            <tr>
+                <td colspan="2"><input type="button" value="0" class="zero" onclick="calculation(this)"></td>
+                <td><input type="button" value="." class="decimal" onclick="calculation(this)"></td>
+                <td><input type="button" value="=" class="equal" onclick="calculation(this)"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
